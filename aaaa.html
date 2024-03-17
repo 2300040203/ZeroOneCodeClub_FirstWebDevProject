@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL University Admission Application</title>
+    <style>
+        /* Add CSS styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #FFFFE0; /* Pale Yellow */
+            border: 5px solid #8B4513; /* Brown border
+with some space */
+            padding: 20px; /* Add some space inside the border */
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+  }
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        th, td {
+            border: 1px solid #ccc;
+padding: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add space between columns */
+        .column + .column {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>KL University</h1>
+    <h2>Admission Application Form</h2>
+    <form action="submit_application.php" method="POST">
+        <div class="two-
+columns">
+            <div class="column">
+                <h2>Student Information</h2>
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+required>
+
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+                <label>Gender:</label>
+                <label for="gender_male">Male</label>
+                <input type="radio" id="gender_male" name="gender" value="Male">
+                <label for="gender_female">Female</label>
+                <input type="radio" id="gender_female" name="gender" value="Female">
+                <label
+for="gender_other">Other</label>
+                <input type="radio" id="gender_other" name="gender" value="Other" required>
+            </div>
+            <div class="column">
+                <h2>Additional Information</h2>
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+
+                <label for="emergency_contact">Emergency Contact Number:</label>
+                <input type="tel" id="emergency_contact" name="emergency_contact"
+required>
+
+                <label for="extracurricular">Extracurricular Activities:</label>
+                <textarea id="extracurricular" name="extracurricular" rows="4"></textarea>
+            </div>
+        </div>
+
+        <h2>Academic Information</h2>
+        <label for="program_of_interest">Program of Interest:</label>
+        <select id="program_of_interest" name="program_of_interest" required>
+<option value="">Select Program</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business Administration">Business Administration</option>
+            <!-- Add more program options as needed -->
+        </select>
+
+        <h2>Previous Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>School/
+College</th>
+                    <th>Year of Passing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="qualification1"></td>
+                    <td><input type="text" name="school1"></td>
+                    <td><input type="text" name="year1"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="qualification2"></td>
+                    <td><input type="text" name="school2"></td>
+                    <td><input
+type="text" name="year2"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <label for="entry_year">Intended Entry Year:</label>
+        <input type="text" id="entry_year" name="entry_year" required>
+
+        <label
+for="preferred_languages">Preferred Programming Languages:</label>
+        <select id="preferred_languages" name="preferred_languages" multiple required>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <!-- Add more programming languages as needed -->
+        </select>
+
+        <h2>Additional Information</h2>
+        <label for="essay">Admission Essay (max 500 words):</label>
+        <textarea id="essay"
+name="essay" rows="6" maxlength="500" required></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+</html>
+
